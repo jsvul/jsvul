@@ -1,0 +1,573 @@
+{
+  "advplyr/audiobookshelf": {
+    "978c2b05f28fc6f8ce30b55f4baf5633aef3a09f": {
+      "merge": false,
+      "project": "advplyr/audiobookshelf",
+      "sha": "bf8407274e3ee300af1927ee660d078a7a801e1c"
+    }
+  },
+  "akashrajpurohit/clipper": {
+    "28f1492a12234cf1e6af85c78bf22ee2f5090d19": {
+      "merge": false,
+      "project": "akashrajpurohit/clipper",
+      "sha": "01743af56dab4004b0cabba843c3007145bdea14"
+    }
+  },
+  "auth0/node-auth0": {
+    "e23cd867a317c26b2aa39bd7fbacd59acb243195": {
+      "merge": false,
+      "project": "auth0/node-auth0",
+      "sha": "62ca61b3348ec8e74d7d00358661af1a8bc98a3c"
+    }
+  },
+  "avo-hq/avo": {
+    "fc92a05a8556b1787c8694643286a1afa6a71258": {
+      "merge": false,
+      "project": "avo-hq/avo",
+      "sha": "51bb80b181cd8e31744bdc4e7f9b501c81172347"
+    }
+  },
+  "bgub/squirrelly": {
+    "af6018fe14f1b36eb1a728ace257fcdb44649845": {
+      "merge": false,
+      "project": "bgub/squirrelly",
+      "sha": "c12418a026f73df645ba927fd29358efe02fed1e"
+    }
+  },
+  "bigbluebutton/bigbluebutton": {
+    "3c71afd309ff152dd4af0c36616f52cb7ee18c1b": {
+      "merge": false,
+      "project": "bigbluebutton/bigbluebutton",
+      "sha": "304bc851a00558f99a908880f4ac44234a074c9d"
+    }
+  },
+  "bmeck/node-cookiejar": {
+    "eaa00021caf6ae09449dde826108153b578348e5": {
+      "merge": false,
+      "project": "bmeck/node-cookiejar",
+      "sha": "bd4b2095200b19c425658657d988a17f00a9c55c"
+    }
+  },
+  "bpmn-io/min-dash": {
+    "5ab05cbc4fd8d5eafb7db540c491ed0906b9d320": {
+      "merge": false,
+      "project": "bpmn-io/min-dash",
+      "sha": "2c6689e2aa29f4b66a4874a2f3003431e9db48d1"
+    }
+  },
+  "braintree/sanitize-url": {
+    "e5afda45d9833682b705f73fc2c1265d34832183": {
+      "merge": false,
+      "project": "braintree/sanitize-url",
+      "sha": "8f7371cebfbd4283d96f94f3256c4fc772eb1c7b"
+    }
+  },
+  "commenthol/safer-eval": {
+    "073267ac30e67d3e5c1762c5d0373444ead61660": {
+      "merge": false,
+      "project": "commenthol/safer-eval",
+      "sha": "25fbbe53e46c54d10b4c583b8f5c659933400ccb"
+    }
+  },
+  "cryptocoinjs/secp256k1-node": {
+    "8bd6446e000fa59df3cda0ae3e424300747ea5ed": {
+      "merge": false,
+      "project": "cryptocoinjs/secp256k1-node",
+      "sha": "9a15fff274f83a6ec7f675f1121babcc0c42292f"
+    }
+  },
+  "cthackers/adm-zip": {
+    "62f64004fefb894c523a7143e8a88ebe6c84df25": {
+      "merge": false,
+      "project": "cthackers/adm-zip",
+      "sha": "6f4dfeb9a2166e93207443879988f97d88a37cde"
+    }
+  },
+  "cubecart/v6": {
+    "7fd1cd04f5d5c3ce1d7980327464f0ff6551de79": {
+      "merge": false,
+      "project": "cubecart/v6",
+      "sha": "db965fcfa260c4f17eb16f8c5494e5af4a8ac271"
+    }
+  },
+  "denoland/deno": {
+    "a4003a5292bd0affefad3ecb24a8732886900f67": {
+      "merge": false,
+      "project": "denoland/deno",
+      "sha": "4f27d7cdc02e3edfb9d36275341fb8185d6e99ed"
+    }
+  },
+  "dojo/dojo": {
+    "3fa7122e43d84ca9be36beb6c27bed6d4baed14b": {
+      "merge": false,
+      "project": "dojo/dojo",
+      "sha": "b7b8b279f3e082e9d4b54144fe831bdc77b2e0c9"
+    }
+  },
+  "dudanogueira/n8n": {
+    "ca2f90c7fbaa1d661ade2f45d587d9469bc287e1": {
+      "merge": false,
+      "project": "n8n-io/n8n",
+      "sha": "29752ead000ac002ba3606ddda15b552ad2d3048"
+    }
+  },
+  "facebook/react": {
+    "cac762a32b322f5d99a5a8c807cf70f16a948fd8": {
+      "merge": true,
+      "project": "facebook/react",
+      "sha": "ff41519ec2fea37643ecae7f87f8e15856247faf"
+    }
+  },
+  "fedify-dev/fedify": {
+    "c641e976089dd913f649889c1bfb016df04e86ba": {
+      "merge": false,
+      "project": "fedify-dev/fedify",
+      "sha": "30f9cf4a175704a04c874f3ea88414c5f1e00b28"
+    }
+  },
+  "finos/git-proxy": {
+    "f99fe42082eab0970e4cd0acdc3421a527a7e531": {
+      "merge": false,
+      "project": "finos/git-proxy",
+      "sha": "a620a2f33c39c78e01783a274580bf822af3cc3a"
+    }
+  },
+  "firecrawl/firecrawl": {
+    "b15fae51a760e9810a66bbfde5d5693d0df3fbeb": {
+      "merge": false,
+      "project": "firecrawl/firecrawl",
+      "sha": "e8cf0985b07968061a6b684b58097732e827ed46"
+    }
+  },
+  "frappe/frappe": {
+    "2cc0ee27557ffd980a25a716399ec088c6d05393": {
+      "merge": false,
+      "project": "frappe/frappe",
+      "sha": "152fd09de5bca16b8d299d715a1f5df6fca3866f"
+    }
+  },
+  "gatsbyjs/gatsby": {
+    "f214eb0694c61e348b2751cecd1aace2046bc46e": {
+      "merge": false,
+      "project": "gatsbyjs/gatsby",
+      "sha": "b3690fbb70cc4470f6f17595f59d83146a443ffb"
+    }
+  },
+  "goauthentik/authentik": {
+    "65373ab21711d58147b5cb9276c5b5876baaa5eb": {
+      "merge": false,
+      "project": "goauthentik/authentik",
+      "sha": "7100d3c6741853f1cfe3ea2073ba01823ab55caa"
+    },
+    "6b9afed21f7c39f171a4a445654cfe415bba37d5": {
+      "merge": false,
+      "project": "goauthentik/authentik",
+      "sha": "b88e39411c12e3f9e04125a7887f12354f760a14"
+    }
+  },
+  "grafana/grafana": {
+    "1c8a50b36973bd59a1cc5f34c30de8a9a6a431f0": {
+      "merge": false,
+      "project": "grafana/grafana",
+      "sha": "8b574e22b53aa4c5a35032a58844fd4aaaa12f5f"
+    }
+  },
+  "grokability/snipe-it": {
+    "dee92cfc6c016986b341c57ed06f3d65e9d18d43": {
+      "merge": false,
+      "project": "grokability/snipe-it",
+      "sha": "5848d9a10c7d62c73ff6a3858edfae96a429402a"
+    }
+  },
+  "grpc/grpc-node": {
+    "afe4c3e0825d0b0256a0f994c7087115d508c580": {
+      "merge": true,
+      "project": "grpc/grpc-node",
+      "sha": "967eeb5443891fba1230438d85d649bc9219b66e"
+    }
+  },
+  "highlightjs/highlight.js": {
+    "d8692db1efa893b4b9e22ca0dbd96c64cc8da8c4": {
+      "merge": false,
+      "project": "highlightjs/highlight.js",
+      "sha": "7241013ae011a585983e176ddc0489a7a52f6bb0"
+    }
+  },
+  "ionicabizau/node-gry": {
+    "e1f67dba2f9f54bf282e58f77499305957d309ef": {
+      "merge": false,
+      "project": "ionicabizau/node-gry",
+      "sha": "5108446c1e23960d65e8b973f1d9486f9f9dbd6c"
+    }
+  },
+  "jgraph/drawio": {
+    "b5dfeb238369d664fb06a95e2179236b0e75f366": {
+      "merge": true,
+      "project": "jgraph/drawio",
+      "sha": "8f3f95a05b701175b639ba9572dc4e0fb7c46b02"
+    }
+  },
+  "johnpapa/generator-hottowel": {
+    "72ec2e22ebe5334ad7532a78fc52da0a0a31fced": {
+      "merge": false,
+      "project": "johnpapa/generator-hottowel",
+      "sha": "c17092fd4103143a9ddab93c8983ace8bf174396"
+    }
+  },
+  "jonschlinkert/merge-deep": {
+    "e370968581413a2e5ffdbbf7c2f5094e0e0b3861": {
+      "merge": true,
+      "project": "jonschlinkert/merge-deep",
+      "sha": "11e5dd56de8a6aed0b1ed022089dbce6968d82a5"
+    }
+  },
+  "jonschlinkert/remarkable": {
+    "6da96c34ca5a3e2ab25ef36a62fe29377bdda9ff": {
+      "merge": true,
+      "project": "jonschlinkert/remarkable",
+      "sha": "49e24e8f2a431c095ddbb74ecb67cf1cf8f88c47"
+    }
+  },
+  "jpuri/react-draft-wysiwyg": {
+    "541a76510e8d2629a8d13474d92edbe5431d6727": {
+      "merge": true,
+      "project": "jpuri/react-draft-wysiwyg",
+      "sha": "f71fb3ca96f4596135ee739d29dfed7cc7b25b4b"
+    }
+  },
+  "jquery/jquery": {
+    "32c50005b1185dc5053106ef665ef257f687d54a": {
+      "merge": false,
+      "project": "jquery/jquery",
+      "sha": "c254d308a7d3f1eac4d0b42837804cfffcba4bb2"
+    }
+  },
+  "juliangruber/brace-expansion": {
+    "b13381281cead487cbdbfd6a69fb097ea5e456c3": {
+      "merge": true,
+      "project": "juliangruber/brace-expansion",
+      "sha": "ed46e5ba619bd938e5b84835fca00eed0adc5585"
+    }
+  },
+  "knockout/knockout": {
+    "86b06aa8633f9f72b953f512df7471a22689ea14": {
+      "merge": false,
+      "project": "knockout/knockout",
+      "sha": "7e280b2b8a04cc19176b5171263a5c68bda98efb"
+    }
+  },
+  "linkedin/dustjs": {
+    "db6d8b91880ce73a065935c4d04b93abd6968b7f": {
+      "merge": false,
+      "project": "linkedin/dustjs",
+      "sha": "ddb6523832465d38c9d80189e9de60519ac307c3"
+    }
+  },
+  "lissy93/web-check": {
+    "50a11a5f50eb3ba2f48a86672b1d52038a93f88e": {
+      "merge": false,
+      "project": "lissy93/web-check",
+      "sha": "0e4958aa10b2650d32439a799f6fc83a7cd46cef"
+    }
+  },
+  "manuelstofer/json-pointer": {
+    "859c9984b6c407fc2d5a0a7e47c7274daa681941": {
+      "merge": true,
+      "project": "manuelstofer/json-pointer",
+      "sha": "47dae1d369a25bd9bdcdbc963b8699b89a882c81"
+    }
+  },
+  "mauriciosoares/ss15-this-is-sparta": {
+    "0a2c4be639038ec1189c357058f214557bec2688": {
+      "merge": false,
+      "project": "mauriciosoares/ss15-this-is-sparta",
+      "sha": "ba2f71ad3a46e5949ee0c510b544fa4ea973baaa"
+    }
+  },
+  "mintplex-labs/anything-llm": {
+    "fa27103d032c58904c49b92ee13fabc19a20a5ce": {
+      "merge": true,
+      "project": "mintplex-labs/anything-llm",
+      "sha": "200bd7f0615347ed2efc07903d510e5a208b0afc"
+    }
+  },
+  "modelcontextprotocol/servers": {
+    "d00c60df9d74dba8a3bb13113f8904407cda594f": {
+      "merge": true,
+      "project": "modelcontextprotocol/servers",
+      "sha": "cc99bdabdcad93a58877c5f3ab20e21d4394423d"
+    }
+  },
+  "moment/moment": {
+    "7aebb1617fc9bced87ab6bc4c317644019b23ce7": {
+      "merge": false,
+      "project": "moment/moment",
+      "sha": "9a3b5894f3d5d602948ac8a02e4ee528a49ca3a3"
+    }
+  },
+  "mrbobbybryant/jobs-plugin": {
+    "5dc24212dd911b7f8c4e6c693471106ee71781cc": {
+      "merge": false,
+      "project": "mrbobbybryant/jobs-plugin",
+      "sha": "b8a56718b1d42834c6ec51d9c489c5dc20471d7b"
+    }
+  },
+  "n8n-io/n8n": {
+    "7940384a85041a1890b1203d69c092c887312500": {
+      "merge": false,
+      "project": "n8n-io/n8n",
+      "sha": "759e5559931779a2adb8a6c47e85947fac09950a"
+    },
+    "e5edc60e344924230baafb11fa1f0af788e9ca9a": {
+      "merge": false,
+      "project": "n8n-io/n8n",
+      "sha": "29752ead000ac002ba3606ddda15b552ad2d3048"
+    }
+  },
+  "nmanousos/email-existence": {
+    "99966d00c92927f1693f8665a603d302dbbf0b68": {
+      "merge": false,
+      "project": "nmanousos/email-existence",
+      "sha": "0029ba71b6ad0d8ec0baa2ecc6256d038bdd9b56"
+    }
+  },
+  "openwrt/luci": {
+    "aa7938d4cb3a3f889dead894ea19334ad07ade51": {
+      "merge": false,
+      "project": "openwrt/luci",
+      "sha": "588381e2111079265cc3b20af33507052f1b58cb"
+    }
+  },
+  "osc/ondemand": {
+    "96f29b995e1add7562516614e4dc8d961987e8b4": {
+      "merge": false,
+      "project": "osc/ondemand",
+      "sha": "40800d68cd019c5f1c48b2deafebba6dff4abee2"
+    }
+  },
+  "parse-community/parse-server": {
+    "a6e654943536932904a69b51e513507fcf90a504": {
+      "merge": false,
+      "project": "parse-community/parse-server",
+      "sha": "cbefe770a7260b54748a058b8a7389937dc35833"
+    },
+    "f332d54577608c5ad927255e06d8c694e2e0ff5b": {
+      "merge": false,
+      "project": "parse-community/parse-server",
+      "sha": "2edf1e4c0363af01e97a7fbc97694f851b7d1ff3"
+    }
+  },
+  "pi-hole/web": {
+    "8f6e1365b6dec0ae1aa0b0b15b102c9133f347e5": {
+      "merge": false,
+      "project": "pi-hole/web",
+      "sha": "c949516ee15fa6a9b0c8511cc4c4d6b0893f3e69"
+    }
+  },
+  "protobufjs/protobuf.js": {
+    "3357ef753871b394b825d15429ceb27b26e24d63": {
+      "merge": false,
+      "project": "protobufjs/protobuf.js",
+      "sha": "b5f1391dff5515894830a6570e6d73f5511b2e8f"
+    }
+  },
+  "pterodactyl/panel": {
+    "8be2b892c3940bdc0157ccdab16685a72d105dd1": {
+      "merge": false,
+      "project": "pterodactyl/panel",
+      "sha": "75b59080e2812ced677dab516222b2a3bb34e3a4"
+    }
+  },
+  "rebeccastevens/deepmerge-ts": {
+    "b39f1a93d9e1c3541bd2fe159fd696a16dbe1c72": {
+      "merge": false,
+      "project": "rebeccastevens/deepmerge-ts",
+      "sha": "d637db7e4fb2bfb113cb4bc1c85a125936d7081b"
+    }
+  },
+  "restdb/codehooks-mcp-server": {
+    "62f918a6fde6a8c700521b542b85315c70f05794": {
+      "merge": false,
+      "project": "restdb/codehooks-mcp-server",
+      "sha": "83db1d1b4c856cbe4a1b961d315706198bb0ffb8"
+    }
+  },
+  "sailshq/lodash": {
+    "c3fd203b3be87a8177f7f00824033c95f981f984": {
+      "merge": true,
+      "project": "sailshq/lodash",
+      "sha": "83a3194e6fc1b4809f846de0bfeb2f03be0df314"
+    }
+  },
+  "salesforce/tough-cookie": {
+    "615627206357d997d5e6ff9da158997de05235ae": {
+      "merge": false,
+      "project": "salesforce/tough-cookie",
+      "sha": "e4fc2e0f9ee1b7a818d68f0ac7ea696f377b1534"
+    }
+  },
+  "salmenbejaoui/selectize-plugin-a11y": {
+    "927d81e9ea86acac1724d57b2ce9f3c962fd34c4": {
+      "merge": true,
+      "project": "salmenbejaoui/selectize-plugin-a11y",
+      "sha": "99c14f7644fdfc815625d7b54829e6c2dca31a8b"
+    }
+  },
+  "segmentio/is-url": {
+    "55ee8ee9dcadccb82746288cd8c36958228a7b70": {
+      "merge": false,
+      "project": "segmentio/is-url",
+      "sha": "149550935c63a98c11f27f694a7c4a9479e53794"
+    }
+  },
+  "sequentech/admin-console": {
+    "c4d1f506d255d51b7a87981a175e6eced4146767": {
+      "merge": false,
+      "project": "sequentech/admin-console",
+      "sha": "0043a6b1e6e0f5abc9557e73f9ffc524fc5d609d"
+    }
+  },
+  "snyk/kubernetes-monitor": {
+    "29a95267c91fe36ab76ee6e6e90a3bc70c3a7bf0": {
+      "merge": false,
+      "project": "snyk/kubernetes-monitor",
+      "sha": "5b9a7821680bbfb6c4a900ab05d898ce2b2cc157"
+    }
+  },
+  "software-mansion/react-native-reanimated": {
+    "49216791ff679dcbdb37dc4c60a58bd36c2592a7": {
+      "merge": true,
+      "project": "software-mansion/react-native-reanimated",
+      "sha": "6025581335f38e8117d321d6f2e0f73a8e6aa902"
+    },
+    "6025581335f38e8117d321d6f2e0f73a8e6aa902": {
+      "merge": false,
+      "project": "software-mansion/react-native-reanimated",
+      "sha": "7adf06d0c59382d884a04be86a96eede3d0432fa"
+    }
+  },
+  "strapi/strapi": {
+    "aedac987254f9613b33c29dbd1450fece3b5c882": {
+      "merge": true,
+      "project": "strapi/strapi",
+      "sha": "b3240205790f3ed6c1cce7b47bb80e687df40114"
+    }
+  },
+  "tj/node-growl": {
+    "fe51263d023da4d21c473b67e72d2519c97d2822": {
+      "merge": true,
+      "project": "tj/node-growl",
+      "sha": "d71177d5331c9de4658aca62e0ac921f178b0669"
+    }
+  },
+  "tux-tn/validator.js": {
+    "b21879cf45c05ee11b2d79e612b651bf7b2d93b7": {
+      "merge": true,
+      "project": "validatorjs/validator.js",
+      "sha": "496fc8b2a7f5997acaaec33cc44d0b8dba5fb5e1"
+    }
+  },
+  "valtimo-platform/valtimo-frontend-libraries": {
+    "8c2dbf2a41180d2b0358d878290e4d37168f0fb6": {
+      "merge": false,
+      "project": "valtimo-platform/valtimo-frontend-libraries",
+      "sha": "1aaba5ef5750dafebbc7476fb08bf2375a25f19e"
+    }
+  },
+  "vercel/ms": {
+    "305f2ddcd4eff7cc7c518aca6bb2b2d2daad8fef": {
+      "merge": true,
+      "project": "vercel/ms",
+      "sha": "caae2988ba2a37765d055c4eee63d383320ee662"
+    }
+  },
+  "vincit/objection.js": {
+    "46b842a6bc897198b83f41ac85c92864b991d7e9": {
+      "merge": true,
+      "project": "vincit/objection.js",
+      "sha": "b41aab8dcd78f426f7468dcda541a7aca18a66a6"
+    }
+  },
+  "vitejs/vite": {
+    "80381c38d6f068b12e6e928cd3c616bd1d64803c": {
+      "merge": false,
+      "project": "vitejs/vite",
+      "sha": "f234b5744d8b74c95535a7b82cc88ed2144263c1"
+    },
+    "92ca12dc79118bf66f2b32ff81ed09e0d0bd07ca": {
+      "merge": false,
+      "project": "vitejs/vite",
+      "sha": "80381c38d6f068b12e6e928cd3c616bd1d64803c"
+    }
+  },
+  "websockets/ws": {
+    "fac8994f104ff55a64a9d8128e1346d30997de78": {
+      "merge": false,
+      "project": "websockets/ws",
+      "sha": "e55e5106f10fcbaac37cfa89759e4cc0d073a52c"
+    }
+  },
+  "wintercms/winter": {
+    "bce4b59584abf961e9400af3d7a4fd7638e26c7f": {
+      "merge": false,
+      "project": "wintercms/winter",
+      "sha": "2a13faf99972e84c9661258f16c4750fa99d29a1"
+    }
+  },
+  "xwiki/xwiki-platform": {
+    "0b135760514fef73db748986a3311f3edd4a553b": {
+      "merge": false,
+      "project": "xwiki/xwiki-platform",
+      "sha": "742cd4591642be4cdcaf68325f17540e0934e64e"
+    },
+    "6cdd69d31d6bf3caa7f40ec55eb317e4e528ad28": {
+      "merge": false,
+      "project": "xwiki/xwiki-platform",
+      "sha": "910a5018a50039e8b24556573dfe342f143ef949"
+    },
+    "8b8a2d80529b9a9c038014c1eb6c2adc08069dfd": {
+      "merge": false,
+      "project": "xwiki/xwiki-platform",
+      "sha": "910a5018a50039e8b24556573dfe342f143ef949"
+    },
+    "9df46f8e5313af46f93bccd1ebc682e28126573f": {
+      "merge": false,
+      "project": "xwiki/xwiki-platform",
+      "sha": "910a5018a50039e8b24556573dfe342f143ef949"
+    },
+    "9f8cc88497418750b09ce9fde5d67d840f038fbf": {
+      "merge": false,
+      "project": "xwiki/xwiki-platform",
+      "sha": "4896712ee6483da623f131be2e618f1f2b79cb8d"
+    },
+    "bbde8a4f564e3c28839440076334a9093e2b4834": {
+      "merge": false,
+      "project": "xwiki/xwiki-platform",
+      "sha": "742cd4591642be4cdcaf68325f17540e0934e64e"
+    },
+    "d88da4572fb7d4f95e1f54bb0cce33fce3df08d9": {
+      "merge": false,
+      "project": "xwiki/xwiki-platform",
+      "sha": "4896712ee6483da623f131be2e618f1f2b79cb8d"
+    },
+    "d9f5043da289ff106f08e23576746fd8baf98794": {
+      "merge": false,
+      "project": "xwiki/xwiki-platform",
+      "sha": "4896712ee6483da623f131be2e618f1f2b79cb8d"
+    }
+  },
+  "zimbra/zm-admin-ajax": {
+    "bb240ce0c71c01caabaa43eed30c78ba8d7d3591": {
+      "merge": false,
+      "project": "zimbra/zm-ajax",
+      "sha": "8d039d6efe80780adc40c6f670c06d21de272105"
+    }
+  },
+  "zjonsson/node-unzipper": {
+    "2220ddd5b58f6252069a4f99f9475441ad0b50cd": {
+      "merge": true,
+      "project": "zjonsson/node-unzipper",
+      "sha": "5f68901c2e2e062a5e0083a81d257eccea0eb760"
+    }
+  }
+}

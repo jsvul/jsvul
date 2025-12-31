@@ -1,0 +1,23 @@
+{
+  "mei23/misskey-v12": {
+    "78173e376f14fcc1987b02196f5538bf5b18225c": {
+      "merge": false,
+      "project": "nexryai/concorde",
+      "sha": "a4e4c9c47c5f84ec7ccd309bde59d4ae5d7e5a98"
+    }
+  },
+  "patriksimek/vm2": {
+    "e3e573fdc99a98a9c7db026e4c40474eb78cab4a": {
+      "merge": false,
+      "project": "patriksimek/vm2",
+      "sha": "3a9876482be487b78a90ac459675da7f83f46d69"
+    }
+  },
+  "zkat/ssri": {
+    "d0ebcdc22cb5c8f47f89716d08b3518b2485d65d": {
+      "merge": true,
+      "project": "npm/ssri",
+      "sha": "d0ebcdc22cb5c8f47f89716d08b3518b2485d65d"
+    }
+  }
+}

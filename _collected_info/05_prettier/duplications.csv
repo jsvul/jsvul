@@ -1,0 +1,5 @@
+type,this_url,that_url
+partial_match,https://github.com/bluewave-labs/checkmate/commit/b387ebaae96fc3a23b090a8baea7a9ebaa70f052,https://github.com/bluewave-labs/checkmate/commit/d4a60723f490502b3fe6f7f780a85d29bf5d1385
+partial_match,https://github.com/mei23/misskey-v12/commit/78173e376f14fcc1987b02196f5538bf5b18225c,https://github.com/nexryai/concorde/commit/a4e4c9c47c5f84ec7ccd309bde59d4ae5d7e5a98
+full_match,https://github.com/npm/ssri/commit/d0ebcdc22cb5c8f47f89716d08b3518b2485d65d,https://github.com/zkat/ssri/commit/d0ebcdc22cb5c8f47f89716d08b3518b2485d65d
+full_match,https://github.com/patriksimek/vm2/commit/3a9876482be487b78a90ac459675da7f83f46d69,https://github.com/patriksimek/vm2/commit/e3e573fdc99a98a9c7db026e4c40474eb78cab4a

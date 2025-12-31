@@ -1,0 +1,8 @@
+.idea/
+.venv/
+__pycache__/
+*cache/
+_data/
+_collected_info/
+.env
+logs/

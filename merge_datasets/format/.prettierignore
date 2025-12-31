@@ -1,0 +1,13 @@
+discourse/discourse-chat/**/chat-channel-archive-modal-inner.js
+discourse/discourse-chat/**/chat-channel-delete-modal-inner.js
+discourse/discourse-chat/**/chat-channel-archive-status.js
+discourse/discourse-chat/**/chat-to-topic-selector.js
+
+discourse/discourse-encrypt/**/decrypt-topics.js
+
+discourse/discourse/**/invites-show.js
+discourse/discourse/**/share-topic.js
+discourse/discourse/**/category.js
+discourse/discourse/**/tag.js
+
+ury-erp/ury/*/ury/public/js/pos_extend.js

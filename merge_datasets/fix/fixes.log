@@ -1,0 +1,50 @@
+aurelia/path/4aa908839ed9c50ada7214807ec4fbbc5e668aff/src/index.js
+  SyntaxError: Unexpected token, expected "," (1:22) -> rename to .ts
+
+brix/crypto-js/e4ac157d8b75b962d6538fc0b996e5d4d5a9466b/src/core.js
+  SyntaxError: Unexpected token, expected "," (322:53) -> hiányzó bezáró zárójel
+
+dckt/localhost-now/30b004c7f145d677df8800a106c2edc982313995/lib/app.js
+  40:25  error  Parsing error: The only valid numeric escape in strict mode is '/0'. (40:25) -> change "\033" to "\x1b"
+
+dckt/localhost-now/f12b06949298ebfc88e65a287cb71fa79c4e42ab/lib/app.js
+  42:24  error  Parsing error: The only valid numeric escape in strict mode is '/0'. (42:24) -> change "\033" to "\x1b"
+
+dojo/dojox/abd033a787c718abc1a390f480ac3ea61288e5ee/widget/RollingList.js
+  896:5  error  Parsing error: Deleting local variable in strict mode. (896:5) -> "delete conn;" to "conn = undefined;"
+
+dojo/dojox/d6b93d9e76752363a402bef31473ce2d2ae356d7/widget/RollingList.js
+  896:5  error  Parsing error: Deleting local variable in strict mode. (896:5) -> "delete conn;" to "conn = undefined;"
+
+ibmdb/node-ibm_db/d7e2d4b4cbeb6f067df8bba7d0b2ac5d40fcfc19/installer/driverInstall.js
+  222:59  error  Parsing error: The only valid numeric escape in strict mode is '\\0'. (222:59) -> change "\033" to "\x1b"
+
+firefly-iii/firefly-iii/83518d7f9698f1eaaa8123a188739e6566799665/public/v1/js/ff/budgets/index.js
+  SyntaxError: Unexpected token, expected "," (212:76) -> hiányzó bezáró zárójel
+
+jvvlee/merlinsboard/dc422a1284196556205b4d7585c29499d972ff58/app/assets/javascripts/views/courses/course_search.js
+  SyntaxError: Unexpected token, expected "," (42:51) -> "query: queryCourse" helyett "{query: queryCourse}"
+
+marak/colors.js/074a0f8ed0c31c35d13d28632bd8a049ff136fb6/lib/index.js
+  SyntaxError: Unexpected token, expected ")" (18:36) -> felesleges ; törölve
+
+mvpoland/django-ajax-utilities/329eb1dd1580ca1f9d4f95bc69939833226515c9/django_ajax/static/ajax-utilities/js/pagination.js
+  SyntaxError: Unexpected token, expected ")" (58:21) -> 57. sor végére bezáró zárójel
+
+natelong/p4/ae42e251beabf67c00539ec0e1d7aa149ca445fb/p4.js: SyntaxError
+  Unexpected token (25:76) -> üres "${}" a template string-ben
+
+rrainn/portprocesses/fffceb09aff7180afbd0bd172e820404b33c8299/cli.js
+  14:10  error  Parsing error: Identifier 'result' has already been declared -> move const result to "let result;" variable before switch statement
+
+sandstorm-io/sandstorm/d616a50002092037048a0a1c6546c8f6183cc861/shell/imports/constants.js
+  19:10  error  Parsing error: Export 'ACCOUNT_DELETION_SUSPENSION_TIME' is not defined -> add "const" to variable
+
+sharpred/deephas/105a15b0bc4b1754a38389d3fefebdd5bcc26f45/deepHas.js
+  10:9  error  Parsing error: Identifier 'indexer' has already been declared. (10:9) -> remove "var indexer/reducer/get/has"
+
+sharpred/deephas/2fe011713a6178c50f7deb6f039a8e5435981e20/deepHas.js
+  10:9  error  Parsing error: Identifier 'indexer' has already been declared. (10:9) -> remove "var indexer/reducer/get/has"
+
+ultimatemember/ultimatemember/e7c86052ab4bd43e037196ca10ba395ac0d83cc4/assets/js/um-scripts.js
+  420:9  error  Parsing error: Binding arguments in strict mode -> 'var arguments = jQuery(this).data("arguments");' to 'var args = jQuery(this).data("args");' and "arguments: arguments," to "arguments: args,"

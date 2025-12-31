@@ -1,0 +1,15 @@
+.venv
+.idea
+_cache
+_collected_info
+_data
+docs
+helpers
+logs
+prezik
+.env
+.env.sample
+.gitignore
+LICENSE
+README.md
+.git

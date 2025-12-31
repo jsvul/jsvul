@@ -1,0 +1,68 @@
+# ======== Ignore generated or bundled files ========
+dist/**
+action/dist/**
+panel/dist/**
+public/dist/**
+static/app/dist/**
+ui/dist/**
+**/assetindexes/dist/**
+**/assets/dist/**
+**/cp/dist/**
+**/frontend/dist/**
+**/js/dist/**
+**/quickpost/dist/**
+**/build/**
+*.min.js
+*-min.js
+*.min.*.js
+*.bmin.js
+*.es.js
+*.esm.js
+**/bundle.js
+*.bundle.js
+*-bundle.js
+*.gen.ts
+*.ie.js
+**/graphql/mutations.js
+**/graphql/queries.js
+**/graphql/subscriptions.js
+**/vsdx/importer.js
+
+# ======== Ignore type and metadata definitions ========
+*.d.ts
+*.types.ts
+
+# Hash-based or versioned build artifacts (e.g., main.abcdef12.js)
+*[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]*.[jt]s
+public/pageIm-*.js
+public/pageSignImport-*.js
+
+# ======== Ignore configs and setups ========
+*.config.js
+*.config.ts
+*.config.mjs
+*.config.custom.js
+*.config-deny.js
+*.conf.js
+*.conf.ts
+*.conf.ci.js
+*.setup.ts
+[Gg]runtfile.js
+webpack.dev.js
+webpack.common.js
+.eslintrc.js
+**/static/karma.js
+[Gg]ulpfile.js
+
+# ======== Others ========
+**/docs/**
+**/lang/**
+**/translations/**
+InvenTree/templates/**
+embed.dev.js
+**/microweber/api/api.js
+
+# ======== Minified (generated) files ========
+litespeed.js
+medusa-runtime.js
+web/js/app.js

@@ -1,0 +1,75 @@
+{
+  "7c4e235433a4a2df9acc313fbe891758084fdec1": {
+    "additions": 351,
+    "changes": 666,
+    "commit_msg": "fix: security issue gh closes #44",
+    "cve": [
+      "CVE-2021-41097"
+    ],
+    "cwe": [
+      "CWE-1321"
+    ],
+    "deletions": 315,
+    "files": [
+      {
+        "additions": 7,
+        "changes": 11,
+        "deletions": 4,
+        "filename": "src/index.ts",
+        "sha": "8282def966237bee85d57aa0764b4ce4120f0d54",
+        "status": "modified"
+      }
+    ],
+    "github": [
+      "GHSA-3c9c-2p65-qvwv"
+    ],
+    "snyk": [
+      "SNYK-JS-AURELIAPATH-1292346"
+    ],
+    "sources": {
+      "cvefixes": {
+        "cve": [
+          "CVE-2021-41097"
+        ],
+        "cwe": [
+          "CWE-1321"
+        ],
+        "files": [
+          "src/index.ts"
+        ],
+        "vuln_sha": "4aa908839ed9c50ada7214807ec4fbbc5e668aff"
+      },
+      "nvd": {
+        "cve": [
+          "CVE-2021-41097"
+        ],
+        "github": [
+          "GHSA-3c9c-2p65-qvwv"
+        ]
+      },
+      "osv": {
+        "cve": [
+          "CVE-2021-41097"
+        ],
+        "github": [
+          "GHSA-3c9c-2p65-qvwv"
+        ]
+      },
+      "secbenchjs": {
+        "cve": [
+          "CVE-2021-41097"
+        ],
+        "files": [
+          "dist/commonjs/aurelia-path.js"
+        ],
+        "github": [
+          "GHSA-3c9c-2p65-qvwv"
+        ],
+        "snyk": [
+          "SNYK-JS-AURELIAPATH-1292346"
+        ]
+      }
+    },
+    "vuln_sha": "4aa908839ed9c50ada7214807ec4fbbc5e668aff"
+  }
+}

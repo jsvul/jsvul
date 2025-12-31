@@ -1,0 +1,16 @@
+{
+  "bluewave-labs/checkmate": {
+    "b387ebaae96fc3a23b090a8baea7a9ebaa70f052": {
+      "bluewave-labs/checkmate": [
+        "d4a60723f490502b3fe6f7f780a85d29bf5d1385"
+      ]
+    }
+  },
+  "npm/ssri": {
+    "d0ebcdc22cb5c8f47f89716d08b3518b2485d65d": {
+      "zkat/ssri": [
+        "d0ebcdc22cb5c8f47f89716d08b3518b2485d65d"
+      ]
+    }
+  }
+}
