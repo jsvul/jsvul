@@ -311,6 +311,8 @@ def _validate_list_arg(arg_list, valid_options, arg_name, parser):
         if len(arg_list) > 1:
             parser.error(f"When 'all' is specified for {arg_name} argument, no other options should be provided.")
 
+        return
+
     for flt in arg_list:
         if flt not in valid_options:
             parser.error(f"Invalid {arg_name} value: {flt}. Valid options are: all, {', '.join(valid_options)}")
@@ -352,6 +354,11 @@ def _log_args(args):
     logger.info("===========================================")
 
 
+def _validate_child_arg(parser, arg, parent_arg, arg_name, parent_arg_name):
+    if arg and not parent_arg:
+        parser.error(f"{arg_name} argument is only valid when {parent_arg_name} parameter is set")
+
+
 def parse_args():
     if len(sys.argv) == 1:
         logger.info("No arguments were provided. Defaulting to RUN ALL steps.")
@@ -379,29 +386,32 @@ def parse_args():
 
     args = parser.parse_args()
 
+    _validate_list_arg(args.datasets, ALL_DATASETS, "datasets", parser)
+    _validate_list_arg(args.filters, ALL_FILTERS, "filters", parser)
+
+    _validate_child_arg(parser, args.datasets, args.merge, "datasets", "merge")
+    _validate_child_arg(parser, args.filters, args.process, "filters", "process")
+    _validate_child_arg(parser, args.unify_dir, args.unify, "unify-dir", "unify")
+    _validate_child_arg(parser, args.unify_split, args.unify, "unify-split", "unify")
+    _validate_child_arg(parser, args.unify_npo, args.unify, "unify-npo", "unify")
+    _validate_child_arg(parser, args.force, any([args.unify, args.process, args.merge]), "force", "merge, process or unify")
+
     if getattr(args, "work_dir", None):
+        _validate_child_arg(parser, args.work_dir, any([args.unify, args.process, args.merge]), "work-dir", "merge, process or unify")
         if not args.work_dir.exists():
             args.work_dir.mkdir(parents=True, exist_ok=True)
 
         if not args.work_dir.is_dir():
             parser.error(f"work-dir '{args.work_dir}' is not a directory.")
 
-    if args.unify_dir:
-        if not args.unify:
-            parser.error(
-                "unify-dir argument is only valid when unify is specified. Default is `[work_dir]/unified_data`"
-            )
-
-        if args.unify_dir.exists() and not args.unify_dir.is_dir():
-            parser.error(f"unify-dir '{args.unify_dir}' is not a directory.")
+    if args.unify_dir and args.unify_dir.exists() and not args.unify_dir.is_dir():
+        parser.error(f"unify-dir '{args.unify_dir}' is not a directory.")
 
     if args.unify_split:
-        if not args.unify:
-            parser.error("unify-split argument is only valid when unify is specified. Default is '80 10 10'")
-
         try:
             try:
                 split_values = [int(s) for s in args.unify_split]
+
             except:
                 split_values = [float(s) for s in args.unify_split]
 
@@ -415,9 +425,6 @@ def parse_args():
                 "unify-split must be a list of positive numbers representing the split ratios "
                 "(e.g., '0.8 0.1 0.1' or '40 5 5')."
             )
-
-    _validate_list_arg(args.datasets, ALL_DATASETS, "datasets", parser)
-    _validate_list_arg(args.filters, ALL_FILTERS, "filters", parser)
 
     return args
 
