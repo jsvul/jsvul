@@ -496,7 +496,7 @@ def main():
         if not args or args.unify:
             unify_out_dir = args and args.unify_dir
             if not unify_out_dir:
-                _, _, unify_out_dir = get_data_dirs("unified_data")
+                _, _, unify_out_dir = get_data_dirs("js_vul")
 
             run_unifying(
                 dir_name_from=final_out,

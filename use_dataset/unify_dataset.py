@@ -99,15 +99,46 @@ def main(data_dir: Path, jsonl_dir: Path, distributions: list[float], only_pairs
                         ef for ef in efl
                         if ef.affected and any(
                             ef.function_name and ef.function_name == vef.function_name
-                            for vfn, vefl in vuln_func_data.items()
+                            for vefl in vuln_func_data.values()
                             for vef in vefl
                         )
                     ]
                     for filename, efl in fix_func_data.items()
                 }
 
-            if only_pairs and not fix_func_data:
-                continue
+                fix_func_data = {fn: efl for fn, efl in fix_func_data.items() if efl}
+
+                fix_func_cnt = sum(len(efl) for efl in fix_func_data.values())
+                if not fix_func_cnt:
+                    continue
+
+                vuln_func_data = {
+                    filename: [
+                        ef for ef in efl
+                        if ef.affected and any(
+                            ef.function_name and ef.function_name == fef.function_name
+                            for fefl in fix_func_data.values()
+                            for fef in fefl
+                        )
+                    ]
+                    for filename, efl in vuln_func_data.items()
+                }
+                vuln_func_data = {fn: efl for fn, efl in vuln_func_data.items() if efl}
+
+                vuln_func_cnt = sum(len(efl) for efl in vuln_func_data.values())
+
+                if fix_func_cnt != vuln_func_cnt:
+                    fix_func_data = {
+                        fn: efl
+                        for fn, efl in fix_func_data.items()
+                        if fn in vuln_func_data
+                    }
+
+                    vuln_func_data = {
+                        fn: efl
+                        for fn, efl in vuln_func_data.items()
+                        if fn in fix_func_data
+                    }
 
             _write_functions(
                 func_data=vuln_func_data, out_file=jsonl_file_path,
@@ -121,6 +152,6 @@ def main(data_dir: Path, jsonl_dir: Path, distributions: list[float], only_pairs
 
 
 if __name__ == "__main__":
-    _, _, dd = get_data_dirs("saved/no_min/08_final")
-    _, _, jdd = get_data_dirs("unified_data_only_name_pairs")
-    main(data_dir=dd, jsonl_dir=jdd, distributions=[8, 1, 1], only_pairs=True)
+    _, _, dd = get_data_dirs("08_final")
+    _, _, jdd = get_data_dirs("unified_data_npo")
+    main(data_dir=dd, jsonl_dir=jdd, distributions=[1], only_pairs=True)
