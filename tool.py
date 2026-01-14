@@ -282,7 +282,7 @@ def remove_duplicated_functions(dir_name_from: str, dir_name_to: str, force=Fals
     logger.info("============ Remove Duplicated Functions step - Done ============")
 
 
-def run_unifying(dir_name_from: str, data_dir_to: Path, distributions: list[float], npo: bool, force=False):
+def run_unifying(dir_name_from: str, data_dir_to: Path, distributions: list[float], po: bool, force=False):
     if data_dir_to.exists() and not force:
         logger.info("============ Unify step - Skipped ============")
         return
@@ -292,7 +292,7 @@ def run_unifying(dir_name_from: str, data_dir_to: Path, distributions: list[floa
         shutil.rmtree(data_dir_to, ignore_errors=True)
 
     _, _, data_dir_from = get_data_dirs(dir_name_from)
-    unify_dataset.main(data_dir=data_dir_from, jsonl_dir=data_dir_to, distributions=distributions, only_pairs=npo)
+    unify_dataset.main(data_dir=data_dir_from, jsonl_dir=data_dir_to, distributions=distributions, only_pairs=po)
     logger.info("============ Unify step - Done ============")
 
 
@@ -380,7 +380,7 @@ def parse_args():
         '--unify-split', nargs='+', default=None,
         help=f'Space separated list of numbers. Defines the split of vulnerable functions in the unify step.'
     )
-    parser.add_argument('--unify-npo', action='store_true', help='Run the unify step only for paired examples')
+    parser.add_argument('--unify-po', action='store_true', help='Run the unify step only for paired examples')
 
     parser.add_argument('-f', '--force', action='store_true', help='Ignore completion checks and force re-processing')
 
@@ -393,7 +393,7 @@ def parse_args():
     _validate_child_arg(parser, args.filters, args.process, "filters", "process")
     _validate_child_arg(parser, args.unify_dir, args.unify, "unify-dir", "unify")
     _validate_child_arg(parser, args.unify_split, args.unify, "unify-split", "unify")
-    _validate_child_arg(parser, args.unify_npo, args.unify, "unify-npo", "unify")
+    _validate_child_arg(parser, args.unify_po, args.unify, "unify-po", "unify")
     _validate_child_arg(parser, args.force, any([args.unify, args.process, args.merge]), "force", "merge, process or unify")
 
     if getattr(args, "work_dir", None):
@@ -502,7 +502,7 @@ def main():
                 dir_name_from=final_out,
                 data_dir_to=unify_out_dir,
                 distributions=(args and args.unify_split) or [80, 10, 10],
-                npo=args and args.unify_npo,
+                po=args and args.unify_po,
                 force=args and args.force,
             )
 
