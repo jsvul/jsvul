@@ -27,3 +27,4 @@ class UnifiedFunctionData(StoredData):
     snyk: list[str] = field(default_factory=list)
     other: list[str] = field(default_factory=list)
     publish_time: Date | None = None
+    paired_id: str | None = None

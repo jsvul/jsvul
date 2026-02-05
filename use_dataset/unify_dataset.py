@@ -1,5 +1,8 @@
 import json
+from collections import defaultdict, deque
 from pathlib import Path
+
+import Levenshtein
 
 from filter_datasets.util.statistics import list_files, list_jsons
 from util.cache import read_cache, convert_extracted_data, convert_merged_data
@@ -22,22 +25,61 @@ def _calculate_distribution(number_of_items, distributions: list[float]) -> list
 
 
 def _write_functions(
-        func_data: dict[str, list[ExtractedFunction]], out_file: Path, project: str, sha: str, mcd: MergedCommitData
+        func_data: list[UnifiedFunctionData], out_file: Path, only_pairs: bool
 ):
-    for filename, efl in func_data.items():
-        for ef in efl:
-            with open(out_file, mode="a", encoding="utf-8") as f:
-                f.write(json.dumps(UnifiedFunctionData(
-                    id=f"{project}::{sha}::{filename}::{ef.start_line}::{ef.start_column}",
-                    project=project, sha=sha, file=filename,
-                    loc=FunctionLoc(
-                        start_line=ef.start_line, start_column=ef.start_column,
-                        end_line=ef.end_line, end_column=ef.end_column,
-                    ),
-                    body=ef.function_body, name=str(ef.function_name) if ef.function_name is not None else None,
-                    cwe=mcd.cwe, cve=mcd.cve, ghsa=mcd.github, snyk=mcd.snyk, other=mcd.others,
-                    publish_time=mcd.publish_time, label=int(ef.vuln),
-                ), default=json_defaults) + "\n")
+    for ufc in func_data:
+        if only_pairs and not ufc.paired_id:
+            continue
+
+        with open(out_file, mode="a", encoding="utf-8") as f:
+            f.write(json.dumps(ufc, default=json_defaults) + "\n")
+
+
+def _convert_functions(
+        func_data: dict[str, list[ExtractedFunction]], project: str, sha: str, mcd: MergedCommitData
+) -> list[UnifiedFunctionData]:
+    return sorted([
+        UnifiedFunctionData(
+            id=f"{project}::{sha}::{filename}::{ef.start_line}::{ef.start_column}",
+            project=project, sha=sha, file=filename,
+            loc=FunctionLoc(
+                start_line=ef.start_line, start_column=ef.start_column,
+                end_line=ef.end_line, end_column=ef.end_column,
+            ),
+            body=ef.function_body, name=str(ef.function_name) if ef.function_name is not None else None,
+            cwe=mcd.cwe, cve=mcd.cve, ghsa=mcd.github, snyk=mcd.snyk, other=mcd.others,
+            publish_time=mcd.publish_time, label=int(ef.vuln),
+        )
+        for filename, efl in func_data.items()
+        for ef in efl
+    ], key=lambda ufd: (project, sha, ufd.file or "", ufd.loc.start_line, ufd.loc.start_column))
+
+
+def _pair_functions(vuln_functions: list[UnifiedFunctionData], fix_functions: list[UnifiedFunctionData]) -> None:
+    fix_functions_by_name = defaultdict(deque)
+    for ff in fix_functions:
+        if ff.name:
+            fix_functions_by_name[ff.name].append(ff)
+
+    matched_functions = {}
+    for vf in vuln_functions:
+        if not vf.name or vf.name not in fix_functions_by_name:
+            continue
+
+        ffs = fix_functions_by_name[vf.name]
+        ff = sorted(ffs, key=lambda ff: (ff.file != vf.file, (Levenshtein.distance(ff.body, vf.body)/2) + abs(ff.loc.start_line - vf.loc.start_line) + abs(ff.loc.end_line - vf.loc.end_line)))[0]
+        if ff.id not in matched_functions:
+            matched_functions[ff.id] = vf
+
+        else:
+            mvf = matched_functions[ff.id]
+            matching_vf = sorted((vf, mvf), key=lambda vf: (ff.file != vf.file, (Levenshtein.distance(ff.body, vf.body)/2) + abs(ff.loc.start_line - vf.loc.start_line) + abs(ff.loc.end_line - vf.loc.end_line)))[0]
+            if matching_vf != mvf:
+                mvf.paired_id = None
+                matched_functions[ff.id] = matching_vf
+
+        ff.paired_id = vf.id
+        vf.paired_id = ff.id
 
 
 def main(data_dir: Path, jsonl_dir: Path, distributions: list[float], only_pairs=False) -> None:
@@ -87,71 +129,23 @@ def main(data_dir: Path, jsonl_dir: Path, distributions: list[float], only_pairs
             commit_func_dir = data_dir / "functions" / project / fix_sha
             vuln_functions_file = commit_func_dir / "vuln.json"
             vuln_func_data: dict[str, list[ExtractedFunction]] = read_cache(vuln_functions_file, convert_extracted_data)
+            vuln_func_unified = _convert_functions(func_data=vuln_func_data,project=project, sha=mcd.vuln_sha, mcd=mcd)
 
             vuln_func_cnt = sum(len(efl) for efl in vuln_func_data.values())
             distribution_cnt -= vuln_func_cnt
 
             fix_functions_file = commit_func_dir / "fix.json"
             fix_func_data: dict[str, list[ExtractedFunction]] = read_cache(fix_functions_file, convert_extracted_data)
-            if only_pairs:
-                fix_func_data = {
-                    filename: [
-                        ef for ef in efl
-                        if ef.affected and any(
-                            ef.function_name and ef.function_name == vef.function_name
-                            for vefl in vuln_func_data.values()
-                            for vef in vefl
-                        )
-                    ]
-                    for filename, efl in fix_func_data.items()
-                }
+            fix_func_unified = _convert_functions(func_data=fix_func_data, project=project, sha=fix_sha, mcd=mcd)
 
-                fix_func_data = {fn: efl for fn, efl in fix_func_data.items() if efl}
+            _pair_functions(vuln_functions=vuln_func_unified, fix_functions=fix_func_unified)
 
-                fix_func_cnt = sum(len(efl) for efl in fix_func_data.values())
-                if not fix_func_cnt:
-                    continue
+            _write_functions(func_data=vuln_func_unified, out_file=jsonl_file_path, only_pairs=only_pairs)
 
-                vuln_func_data = {
-                    filename: [
-                        ef for ef in efl
-                        if ef.affected and any(
-                            ef.function_name and ef.function_name == fef.function_name
-                            for fefl in fix_func_data.values()
-                            for fef in fefl
-                        )
-                    ]
-                    for filename, efl in vuln_func_data.items()
-                }
-                vuln_func_data = {fn: efl for fn, efl in vuln_func_data.items() if efl}
-
-                vuln_func_cnt = sum(len(efl) for efl in vuln_func_data.values())
-
-                if fix_func_cnt != vuln_func_cnt:
-                    fix_func_data = {
-                        fn: efl
-                        for fn, efl in fix_func_data.items()
-                        if fn in vuln_func_data
-                    }
-
-                    vuln_func_data = {
-                        fn: efl
-                        for fn, efl in vuln_func_data.items()
-                        if fn in fix_func_data
-                    }
-
-            _write_functions(
-                func_data=vuln_func_data, out_file=jsonl_file_path,
-                project=project, sha=mcd.vuln_sha, mcd=mcd
-            )
-
-            _write_functions(
-                func_data=fix_func_data, out_file=jsonl_file_path,
-                project=project, sha=fix_sha, mcd=mcd
-            )
+            _write_functions(func_data=fix_func_unified, out_file=jsonl_file_path, only_pairs=only_pairs)
 
 
 if __name__ == "__main__":
     _, _, dd = get_data_dirs("08_final")
-    _, _, jdd = get_data_dirs("unified_data_npo")
-    main(data_dir=dd, jsonl_dir=jdd, distributions=[1], only_pairs=True)
+    _, _, jdd = get_data_dirs("js_vul")
+    main(data_dir=dd, jsonl_dir=jdd, distributions=[8, 1, 1], only_pairs=False)
