@@ -34,7 +34,7 @@ def _write_functions(
                         start_line=ef.start_line, start_column=ef.start_column,
                         end_line=ef.end_line, end_column=ef.end_column,
                     ),
-                    body=ef.function_body, name=str(ef.function_name),
+                    body=ef.function_body, name=str(ef.function_name) if ef.function_name is not None else None,
                     cwe=mcd.cwe, cve=mcd.cve, ghsa=mcd.github, snyk=mcd.snyk, other=mcd.others,
                     publish_time=mcd.publish_time, label=int(ef.vuln),
                 ), default=json_defaults) + "\n")
